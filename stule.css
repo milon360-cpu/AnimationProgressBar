@@ -4,6 +4,11 @@
     margin: 0px;
     box-sizing: border-box;
 }
+body
+{
+    padding: 0px;
+    margin: 0px;
+}
 .progressBar
 {
     background-color: rgb(20, 59, 59);
@@ -57,6 +62,8 @@
     /* animation-iteration-count:forward; */
     /* animation-direction: forward; */
 }
+
+/* AFTER AL li  */
 .progressBar li.html::after
 {
     animation-name: html;
@@ -81,6 +88,7 @@
 
 
 
+/* ADDED ANIMATION */
 
 @keyframes html
 {
@@ -124,11 +132,7 @@
 }
 
 
-
-
-
-
-
+/* PARCENTAGE LABEL  */
 #html_
 {
     margin-left: 2%;
@@ -137,6 +141,7 @@
     font-weight: bold;
 }
 
+/* RWD FOR PHONE  */
 @media screen and (max-width:660px)
 {
     .progressBar li::before
