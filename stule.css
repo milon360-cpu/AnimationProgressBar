@@ -1,0 +1,156 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.progressBar
+{
+    background-color: rgb(20, 59, 59);
+    height: 500px;
+    max-width: 600px;
+    margin: 0px auto;
+    margin-top: 5%;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.progressBar:hover
+{
+  box-shadow:15px 15px 50px rgb(199, 199, 199);
+}
+.progressBar ul li
+{
+  list-style: none;
+  margin: 10% 0%;
+  font-weight: bold;
+  font-size: 20px;
+  color: tomato;
+  position: relative;
+}
+.progressBar li::before
+{
+    content: '';
+    position: absolute;
+    background-color: rgb(253, 253, 253);
+    height: 25px;
+    width: 100%;
+    top: 35px;
+    left: 0px;
+    border-radius: 20px;
+
+}
+.progressBar li::after
+{
+    content: '';
+    position: absolute;
+    background-color: rgb(199, 189, 187);
+    height: 25px;
+    width: 0%;
+    top: 35px;
+    left: 0px;
+    border-radius: 20px;
+    
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count:forward; */
+    /* animation-direction: forward; */
+}
+.progressBar li.html::after
+{
+    animation-name: html;
+}
+.progressBar li.CSS::after
+{
+    animation-name: CSS;
+}
+.progressBar li.JAVA::after
+{
+    animation-name: JAVA;
+}
+.progressBar li.JAVA-SCRIPT::after
+{
+    animation-name:JAVA-SCRIPT;
+}
+.progressBar li.PYTHON::after
+{
+    animation-name: PYTHON;
+}
+
+
+
+
+
+@keyframes html
+{
+    to
+    {
+        width: 90%;
+        background-color: rgb(21, 206, 58);
+    }
+}
+@keyframes CSS
+{
+    to
+    {
+        width: 80%;
+        background-color: rgb(21, 206, 58);
+    }
+}
+@keyframes JAVA
+{
+    to
+    {
+        width: 70%;
+        background-color: rgb(21, 206, 58);
+    }
+}
+@keyframes JAVA-SCRIPT
+{
+    to
+    {
+        width: 60%;
+        background-color: rgb(21, 206, 58);
+    }
+}
+@keyframes PYTHON
+{
+    to
+    {
+        width: 50%;
+        background-color: rgb(21, 206, 58);
+    }
+}
+
+
+
+
+
+
+
+#html_
+{
+    margin-left: 2%;
+    color: greenyellow;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:660px)
+{
+    .progressBar li::before
+    {
+         top: 35px;
+         left: 0px;
+    }
+    .progressBar li::after
+    {
+         top: 35px;
+         left: 0px;
+    }
+    .progressBar ul li
+    {
+        margin: 15% 0%!important;
+    }
+}
